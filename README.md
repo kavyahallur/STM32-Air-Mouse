@@ -16,9 +16,10 @@ MPU-6050 -> I2C (PB8/PB9) -> STM32F401RE -> USB HID Full-Speed -> PC cursor
 
 ## Hardware
 
-| Component | Role
+ Component Role
 
- *STM32F401RE Nucleo-64 - Main controller (Cortex-M4 @ 84 MHz) 
+ *STM32F401RE Nucleo-64 - Main controller (Cortex-M4 @ 84 MHz)
+ 
  *MPU-6050 module - 6-axis IMU, I2C address 0x68 
  *Tactile buttons (x4) - Click and scroll inputs 
  *Micro-USB US- B HID connection to PC 
