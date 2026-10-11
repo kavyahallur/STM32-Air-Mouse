@@ -16,8 +16,6 @@ MPU-6050 -> I2C (PB8/PB9) -> STM32F401RE -> USB HID Full-Speed -> PC cursor
 
 ## Hardware
 
-## Hardware
-
 ### Components
 - **STM32F401RE Nucleo-64:** main controller (Cortex-M4 @ 84 MHz)
 - **MPU-6050 module:** 6-axis IMU, I2C address 0x68
