@@ -16,28 +16,27 @@ MPU-6050 -> I2C (PB8/PB9) -> STM32F401RE -> USB HID Full-Speed -> PC cursor
 
 ## Hardware
 
- Component Role
+## Hardware
 
- *STM32F401RE Nucleo-64 - Main controller (Cortex-M4 @ 84 MHz)
- 
- *MPU-6050 module - 6-axis IMU, I2C address 0x68 
- *Tactile buttons (x4) - Click and scroll inputs 
- *Micro-USB US- B HID connection to PC 
+### Components
+- **STM32F401RE Nucleo-64:** main controller (Cortex-M4 @ 84 MHz)
+- **MPU-6050 module:** 6-axis IMU, I2C address 0x68
+- **Tactile buttons (x4):** click and scroll inputs
+- **Micro-USB:** USB HID connection to PC
 
-### Wiring
+### Wiring: MPU-6050 to Nucleo
+- **VCC** → 3.3V (power)
+- **GND** → GND (ground)
+- **SDA** → PB9 (I2C data)
+- **SCL** → PB8 (I2C clock)
+- **AD0** → GND (sets address 0x68)
 
-| MPU-6050 | Nucleo pin | Purpose |
-| VCC | 3.3V | Power |
-| GND | GND | Ground |
-| SDA | PB9 | I2C data |
-| SCL | PB8 | I2C clock |
-| AD0 | GND | Sets address 0x68 |
-
-| Button | Pin |
-| Left click | PA0 |
-| Right click | PA1 |
-| Scroll up | PB1 |
-| Scroll down | PC13 |
+### Wiring: Buttons to Nucleo
+- **Left click** → PA0
+- **Right click** → PA1
+- **Scroll up** → PB1
+- **Scroll down** → PC13
+- All buttons are active-low with internal pull-ups.
 
 Buttons are active-low with internal pull-ups. USB uses PA11/PA12.
 
