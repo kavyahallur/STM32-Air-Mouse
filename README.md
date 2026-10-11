@@ -34,8 +34,6 @@ MPU-6050 -> I2C (PB8/PB9) -> STM32F401RE -> USB HID Full-Speed -> PC cursor
 - **Right click** → PA1
 - **Scroll up** → PB1
 - **Scroll down** → PC13
-- All buttons are active-low with internal pull-ups.
-
 Buttons are active-low with internal pull-ups. USB uses PA11/PA12.
 
 ## How It Works
